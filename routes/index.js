@@ -113,6 +113,18 @@ router.get('/settings', ensureAuthenticated, (req, res) =>
     user: req.user
   })
 );
+
+router.get('/withdrawal-success', ensureAuthenticated, (req, res) =>
+  res.render('success', {
+    user: req.user
+  })
+);
+
+router.get('/deposit-success', ensureAuthenticated, (req, res) =>
+  res.render('deposit', {
+    user: req.user
+  })
+);
 router.get('/checkout', ensureAuthenticated, (req, res) =>
   res.render('checkout', {
     user: req.user
@@ -120,6 +132,69 @@ router.get('/checkout', ensureAuthenticated, (req, res) =>
 );
 router.get('/bloop', ensureAuthenticated, (req, res) =>
   res.render('complete', {
+    user: req.user
+  })
+);
+router.get('/select-coin-19843667164', ensureAuthenticated, (req, res) =>
+  res.render('coin', {
+    user: req.user
+  })
+);
+router.get('/bit-pay', ensureAuthenticated, (req, res) =>
+  res.render('bitpay', {
+    user: req.user
+  })
+);
+
+
+router.get('/ether-pay', ensureAuthenticated, (req, res) =>
+  res.render('etherpay', {
+    user: req.user
+  })
+);
+
+
+router.get('/litecoin-pay', ensureAuthenticated, (req, res) =>
+  res.render('litecoinpay', {
+    user: req.user
+  })
+);
+
+
+router.get('/binance-pay', ensureAuthenticated, (req, res) =>
+  res.render('binancepay', {
+    user: req.user
+  })
+);
+
+
+router.get('/doge-pay', ensureAuthenticated, (req, res) =>
+  res.render('doge', {
+    user: req.user
+  })
+);
+
+
+router.get('/ripple-pay', ensureAuthenticated, (req, res) =>
+  res.render('ripplepay', {
+    user: req.user
+  })
+);
+
+router.get('/usdt-pay', ensureAuthenticated, (req, res) =>
+  res.render('usdt', {
+    user: req.user
+  })
+);
+router.get('/busd-pay', ensureAuthenticated, (req, res) =>
+  res.render('busd', {
+    user: req.user
+  })
+);
+
+
+router.get('/tron-pay', ensureAuthenticated, (req, res) =>
+  res.render('tronpay', {
     user: req.user
   })
 );
